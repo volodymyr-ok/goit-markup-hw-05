@@ -58,7 +58,7 @@
       <!-- хххххххххххххххххххххххххх Ефективні рішення для вашого бізнесу хххххххххххххххххххххххххх -->
       <section class="hero section">
         <h1 class="heading">Ефективні рішення для<br />вашого бізнесу</h1>
-        <button type="button" class="hero-btn">Замовити послугу</button>
+        <button data-modal-open type="button" class="hero-btn">Замовити послугу</button>
       </section>
 
       <!-- хххххххххххххххххххххххххх Особливості -->
@@ -591,10 +591,17 @@
       </div>
     </footer>
 
-    <!-- хххххххххххххххххххххххххх Модального вікно -->
-    <div class="backdrop">
-      <div class="modal-window is-hidden">
-        <button type="button" class="close-btn">
+    <!-- хххххххххххххххххххххххххх Модальне вікно -->
+    <div data-modal class="backdrop is-hidden">
+      <div class="modal">
+        <!-- <p class="modal-text">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque voluptas velit repudiandae
+          ullam ratione asperiores unde molestiae! Aut natus, omnis sequi perferendis reprehenderit
+          soluta aliquid pariatur corrupti deleniti, velit veniam, optio labore laudantium
+          dignissimos. Vero itaque dolor dicta fuga corrupti aliquam alias! Iure, sequi doloremque
+          pariatur at vero porro est?
+        </p> -->
+        <button data-modal-close type="button" class="close-btn">
           <svg class="close-icon">
             <use href="./images/icons.svg#close"></use>
           </svg>

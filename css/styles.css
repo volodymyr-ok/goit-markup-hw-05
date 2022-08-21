@@ -19,6 +19,26 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+/* Анімаціїї */
+/* @keyframes changeBgColor {
+  0% {
+    background-color: teal;
+  }
+
+  50% {
+    background-color: orange;
+  }
+
+  100% {
+    background-color: deepskyblue;
+  }
+} */
+
+/* .nav:hover {
+  animation-name: changeBgColor;
+  animation-duration: 3000ms;
+} */
+
 /* Сховані заголовки */
 .visually-hidden {
   display: none;
@@ -139,8 +159,6 @@ ul > .nav-item:not(:last-child) {
 }
 
 .nav {
-  /* position: relative; */
-
   color: var(--main-color);
   text-decoration: none;
 }
@@ -180,7 +198,7 @@ ul > .nav-item:not(:last-child) {
   align-items: center;
 }
 
-/* Іконки контактів в хедері */
+/* -------------- Іконки контактів в хедері */
 .header-icon {
   display: inline-block;
   margin-right: 10px;
@@ -487,14 +505,14 @@ header .contact:focus .header-icon {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.member-network:hover .team-icon,
-.member-network:focus .team-icon {
-  fill: white;
-}
-
 .member-network:hover,
 .member-network:focus {
   background-color: var(--blue-accent);
+}
+
+.member-network:hover .team-icon,
+.member-network:focus .team-icon {
+  fill: white;
 }
 
 .clients-heading {
@@ -729,14 +747,50 @@ address .contact {
 
 /* ----------------------Модальне вікно */
 
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.backdrop.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 528px;
+  height: 581px;
+
+  background-color: #ffffff;
+  border-radius: 4px;
+}
+
+/* .modal-text {
+  color: #ffffff;
+} */
+
 .close-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+
   display: flex;
   justify-content: center;
   align-items: center;
 
   width: 30px;
   height: 30px;
-  /* padding: 6px; */
 
   /* background-color: teal; */
   border-width: 1px;
@@ -749,8 +803,4 @@ address .contact {
 .close-icon {
   width: 18px;
   height: 18px;
-}
-
-.is-hidden {
-  /* display: none; */
 }
