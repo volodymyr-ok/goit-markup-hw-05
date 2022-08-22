@@ -160,9 +160,17 @@ ul > .nav-item:not(:last-child) {
   position: relative;
 }
 
+/* .nav-link {
+  display: inline-block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+} */
+
 .nav {
   color: var(--main-color);
   text-decoration: none;
+  /* padding-top: 32px;
+  padding-bottom: 32px; */
 }
 
 .current::after {
@@ -204,6 +212,7 @@ ul > .nav-item:not(:last-child) {
 .header-icon {
   display: inline-block;
   margin-right: 10px;
+  fill: var(--minor-color);
 
   transition-property: fill;
   transition-duration: 250ms;
