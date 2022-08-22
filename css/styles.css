@@ -806,7 +806,6 @@ address .contact {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
 
-  /* transform: translate(-100%, -100%); */
   transition-property: visibility, opacity;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -817,14 +816,13 @@ address .contact {
   opacity: 0;
   pointer-events: none;
 
-  /* transform: translate(-100%, -100%); */
   transition-property: visibility, opacity;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .backdrop.is-hidden .modal {
-  transform: translate(-100%, -100%) rotate(360deg);
+  transform: translate(-100%, -100%) rotate(360deg) scale(0);
 
   /* transition-property: visibility, opacity, transform;
   transition-duration: 250ms;
