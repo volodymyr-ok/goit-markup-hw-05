@@ -636,14 +636,15 @@ header .contact:focus .header-icon {
   gap: 30px;
 }
 
-.pf-list h2 {
+/* .pf-list h2 */
+.pf-title {
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
 }
 
-.pf-list .type {
+.pf-type {
   color: var(--minor-color);
   font-size: 16px;
   line-height: 1.87;
@@ -654,16 +655,16 @@ header .contact:focus .header-icon {
   flex-basis: calc((100% - 68px) / 3);
 }
 
-.project-thumb {
-  position: relative;
-
-  overflow: hidden;
-}
-
 .pf-item:hover,
 .pf-item:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.pf-thumb {
+  position: relative;
+
+  overflow: hidden;
 }
 
 .pf-text {
@@ -689,19 +690,8 @@ header .contact:focus .header-icon {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* @keyframes pfOverlay {
-  
-  0% {
-    transform: translateY(100%);
-}
-  
-  100% {
-  transform: translateY(0%);
-} */
-
 .pf-item:hover .pf-text {
   transform: translateY(0%);
-  /* animation: pfOverlay; */
 }
 
 .descr-container {
