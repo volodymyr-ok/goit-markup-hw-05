@@ -167,7 +167,7 @@ img {
   text-decoration: none;
 
   color: var(--minor-color);
-  display: inline-flex;
+  display: flex;
   align-items: center;
 }
 
@@ -180,6 +180,7 @@ img {
 .header-icon {
   display: inline-block;
   margin-right: 10px;
+
   fill: var(--minor-color);
 
   transition-property: fill;
@@ -197,24 +198,26 @@ img {
 /*__________Герой*/
 
 .hero {
-  text-align: center;
-  background-color: var(--secondary-bg);
-
   margin-right: auto;
   margin-left: auto;
   max-width: 1600px;
   width: 100%;
+  padding-top: 200px;
+  padding-bottom: 200px;
+
+  text-align: center;
+  background-color: var(--secondary-bg);
   background-image: url(../images/team-work-bg.jpg),
     linear-gradient(to top, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
   background-size: cover;
   background-repeat: no-repeat;
   background-position: right 50% bottom 50%;
-
-  padding-top: 200px;
-  padding-bottom: 200px;
 }
 
 .heading {
+  margin-top: 0;
+  margin-bottom: 30px;
+
   color: var(--hover-text-accent);
   font-style: normal;
   font-weight: 900;
@@ -223,14 +226,13 @@ img {
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-
-  margin-top: 0;
-  margin-bottom: 30px;
 }
 
 .hero-btn {
   padding: 10px 32px;
+  border: none;
 
+  border-radius: 4px;
   font-family: inherit;
   font-weight: 700;
   font-size: 16px;
@@ -238,10 +240,8 @@ img {
   text-align: center;
   letter-spacing: 0.06em;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border: none;
   background-color: var(--blue-accent);
   color: var(--hover-text-accent);
-  border-radius: 4px;
 
   cursor: pointer;
   transition-property: background-color, color;
