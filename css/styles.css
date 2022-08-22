@@ -21,39 +21,9 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
-/* Анімаціїї */
-/* @keyframes changeBgColor {
-  0% {
-    background-color: teal;
-  }
-
-  50% {
-    background-color: orange;
-  }
-
-  100% {
-    background-color: deepskyblue;
-  }
-} */
-
-/* .nav:hover {
-  animation-name: changeBgColor;
-  animation-duration: 3000ms;
-} */
-
 /* Сховані заголовки */
 .visually-hidden {
   display: none;
-  /* position: absolute;
-  white-space: nowrap;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  border: 0;
-  padding: 0;
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  margin: -1px; */
 }
 
 .container {
@@ -106,11 +76,6 @@ img {
   align-items: center;
 }
 
-header .container {
-  padding-top: 25px;
-  padding-bottom: 25px;
-}
-
 .navigation {
   display: flex;
   align-items: center;
@@ -119,16 +84,14 @@ header .container {
 /*__________Логотип */
 
 .logo {
+  margin-right: 93px;
+
   text-decoration: none;
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
   letter-spacing: 0.03em;
-}
-
-header .logo {
-  margin-right: 93px;
 }
 
 .logo-web {
@@ -143,49 +106,24 @@ header .logo {
 
 .nav-list {
   display: flex;
-}
-
-.nav-list a {
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-}
-
-ul > .nav-item:not(:last-child) {
-  margin-right: 50px;
+  gap: 50px;
 }
 
 .nav-item {
   position: relative;
 }
 
-/* .nav-link {
+.nav {
   display: inline-block;
   padding-top: 32px;
   padding-bottom: 32px;
-} */
 
-.nav {
-  color: var(--main-color);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
   text-decoration: none;
-  /* padding-top: 32px;
-  padding-bottom: 32px; */
-}
-
-.current::after {
-  content: '';
-
-  position: absolute;
-  bottom: -32px;
-  left: 0;
-
-  border-radius: 2px;
-
-  width: 100%;
-  height: 4px;
-
-  background-color: var(--blue-accent);
+  color: var(--main-color);
 }
 
 .nav:hover,
@@ -196,16 +134,46 @@ ul > .nav-item:not(:last-child) {
   color: var(--blue-accent);
 }
 
-.nav.current {
+.current::after {
+  content: '';
+
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+
+  border-radius: 2px;
+  width: 100%;
+  height: 4px;
+
+  background-color: var(--blue-accent);
+}
+
+.current {
   color: var(--blue-accent);
 }
 
 /*__________Контакти хедера*/
 
-.nav.contact {
+.nav-contacts {
+  display: flex;
+  gap: 30px;
+}
+
+.contact {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+
   color: var(--minor-color);
   display: inline-flex;
   align-items: center;
+}
+
+.contact:hover,
+.contact:focus {
+  color: var(--blue-accent);
 }
 
 /* -------------- Іконки контактів в хедері */
@@ -219,13 +187,8 @@ ul > .nav-item:not(:last-child) {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-a.contact:hover,
-a.contact:focus {
-  color: var(--blue-accent);
-}
-
-header .contact:hover .header-icon,
-header .contact:focus .header-icon {
+.contact:hover .header-icon,
+.contact:focus .header-icon {
   fill: var(--blue-accent);
 }
 
