@@ -124,13 +124,14 @@ img {
   letter-spacing: 0.02em;
   text-decoration: none;
   color: var(--main-color);
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav:hover,
 .nav:focus {
-  transition-property: color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   color: var(--blue-accent);
 }
 
@@ -146,6 +147,10 @@ img {
   height: 4px;
 
   background-color: var(--blue-accent);
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .current {
@@ -169,6 +174,10 @@ img {
   color: var(--minor-color);
   display: flex;
   align-items: center;
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contact:hover,
